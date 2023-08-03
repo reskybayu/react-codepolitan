@@ -1,10 +1,10 @@
-import Article from './components/Article'
 import './App.css'
-import HomePage from './pages/Index'
 import { GlobalContext } from './context'
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
 
 function App() {
-  
+
   const user = {
     username : "Bayu"
   }
@@ -13,7 +13,7 @@ function App() {
     <>
       <div>
         <GlobalContext.Provider value={user}>
-          <HomePage/>
+          <RouterProvider router={router} />
         </GlobalContext.Provider>
       </div> 
     </>
